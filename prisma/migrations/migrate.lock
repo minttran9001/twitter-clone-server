@@ -1,0 +1,9 @@
+# Prisma Migrate lockfile v1
+
+20210323152041-initial-database
+20210325073343-add-tweet-file-property
+20210325162358-delete-tweet-file-property
+20210326124616-add-tweet-files-property
+20210326125253-change-tweet-files-type
+20210329074552
+20210329074750-add-following-relation

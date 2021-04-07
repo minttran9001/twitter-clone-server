@@ -1,0 +1,103 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "User",
+      "field": "followed",
+      "type": "Following",
+      "arity": "List"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "followed"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "User",
+          "field": "followed"
+        },
+        "directive": "relation"
+      },
+      "argument": "",
+      "value": "\"followed\""
+    },
+    {
+      "tag": "CreateField",
+      "model": "Following",
+      "field": "UserFollowed",
+      "type": "User",
+      "arity": "Optional"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Following",
+          "field": "UserFollowed"
+        },
+        "directive": "relation"
+      }
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Following",
+          "field": "UserFollowed"
+        },
+        "directive": "relation"
+      },
+      "argument": "",
+      "value": "\"followed\""
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Following",
+          "field": "UserFollowed"
+        },
+        "directive": "relation"
+      },
+      "argument": "fields",
+      "value": "[followId]"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Directive",
+        "path": {
+          "tag": "Field",
+          "model": "Following",
+          "field": "UserFollowed"
+        },
+        "directive": "relation"
+      },
+      "argument": "references",
+      "value": "[id]"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Following",
+      "field": "followId",
+      "arity": "Optional"
+    }
+  ]
+}
